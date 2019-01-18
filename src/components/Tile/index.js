@@ -8,7 +8,7 @@ const TileWrapper = styled.div`
 export const Tile = () => {
   return (
     <TileWrapper>
-      <div>test</div>
+      <div>Game </div>
     </TileWrapper>
   );
 };
