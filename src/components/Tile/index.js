@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const TileWrapper = styled.div`
-  background-color: red;
+const Wrapper = styled.div`
+  background-color: ${props => props.color};
+  color: #fff;
+  width: 100%;
+  padding-top: 100%;
 `;
 
-export const Tile = () => {
-  return (
-    <TileWrapper>
-      <div>Game </div>
-    </TileWrapper>
-  );
+export const Tile = ({ color }) => {
+  return <Wrapper color={color} />;
 };
