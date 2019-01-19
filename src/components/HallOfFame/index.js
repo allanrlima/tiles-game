@@ -59,7 +59,7 @@ export const HallOfFame = ({ hideHallOfFame }) => {
           const { name, step } = record;
           const position = index + 1;
           return (
-            <div>
+            <div key={index}>
               <div>
                 {position}. {name === "" ? "Anonymous" : name} - Record: {step}
               </div>
