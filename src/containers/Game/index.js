@@ -20,21 +20,21 @@ class Game extends Component {
     step: 1
   };
 
-  getTilesQuantityByStep = () => {
+  getTilesNumberByStep = () => {
     const { step } = this.state;
-    const tilesQuantity = Math.pow(step + 1, 2);
-    return tilesQuantity;
+    const tilesNumber = Math.pow(step + 1, 2);
+    return tilesNumber;
   };
 
   getTiles = () => {
-    const tilesQuantity = this.getTilesQuantityByStep();
+    const tilesNumber = this.getTilesNumberByStep();
 
     const tile = {
-      color: "black",
+      color: "red",
       unique: false
     };
 
-    const tiles = Array(tilesQuantity).fill(tile);
+    const tiles = Array(tilesNumber).fill(tile);
     return tiles;
   };
 

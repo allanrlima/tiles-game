@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   grid-template-columns: ${props => props.gridTemplateColumns};
 `;
 
-const getTilesGridTemplateColumns = (tiles = []) => {
+const getTilesGridTemplateColumnsStyle = (tiles = []) => {
   const sliceQuantity = Math.sqrt(tiles.length);
   const gridTemplateColumns = tiles.slice(0, sliceQuantity).map(() => "auto ");
   return gridTemplateColumns;
@@ -17,7 +17,9 @@ const getTilesGridTemplateColumns = (tiles = []) => {
 
 export const TilesWrapper = ({ tiles }) => {
   return (
-    <Wrapper gridTemplateColumns={getTilesGridTemplateColumns(tiles) || "auto"}>
+    <Wrapper
+      gridTemplateColumns={getTilesGridTemplateColumnsStyle(tiles) || "auto"}
+    >
       {tiles.map(tile => (
         <Tile color={tile.color} />
       ))}
