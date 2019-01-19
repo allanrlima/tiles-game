@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const ButtonComponent = styled.button`
   position: relative;
@@ -14,7 +14,7 @@ const ButtonComponent = styled.button`
   outline: none;
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  background-color: '#FFF';
+  background-color: "#FFF";
   color: 000;
   transition: background-color 0.3s;
   padding: 12px 24px;
@@ -25,7 +25,7 @@ const ButtonComponent = styled.button`
     background-color: #27ae60;
   }
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,11 +45,13 @@ const ButtonComponent = styled.button`
     padding-top: 120%;
     transition: width 0.2s ease-out, padding-top 0.2s ease-out;
   }
-`
+`;
 
-export const Button = ({ onClick, title }) => <ButtonComponent onClick={onClick}>{title}</ButtonComponent>
+export const Button = ({ onClick, title }) => (
+  <ButtonComponent onClick={onClick}>{title}</ButtonComponent>
+);
 
 Button.propTypes = {
   onClick: PropTypes.func.isRequired,
-  title: PropTypes.string.isRequired,
-}
+  title: PropTypes.string.isRequired
+};

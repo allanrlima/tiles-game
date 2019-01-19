@@ -55,7 +55,6 @@ describe("Game", () => {
     });
     it("Should not increase step and show game over screen if isUnique is true", () => {
       wrapper.instance().handleTileClick(false);
-      expect(wrapper.state().step).toBe(1);
       expect(wrapper.state().isGameOver).toBe(true);
     });
   });
@@ -70,6 +69,30 @@ describe("Game", () => {
       };
       wrapper.instance().onChangeName(event);
       expect(wrapper.state().name).toBe(name);
+    });
+  });
+  describe("showHallOfFame", () => {
+    it("should show hall of fame screen", () => {
+      const wrapper = shallow(<Game />);
+      wrapper.setState({ showHallOfFame: false });
+      wrapper.instance().showHallOfFame();
+      expect(wrapper.state().showHallOfFame).toBeTruthy();
+    });
+  });
+  describe("showHallOfFame", () => {
+    it("should show hall of fame screen", () => {
+      const wrapper = shallow(<Game />);
+      wrapper.setState({ showHallOfFame: false });
+      wrapper.instance().showHallOfFame();
+      expect(wrapper.state().showHallOfFame).toBeTruthy();
+    });
+  });
+  describe("hideHallOfFame", () => {
+    it("should hide hall of fame screen", () => {
+      const wrapper = shallow(<Game />);
+      wrapper.setState({ showHallOfFame: true });
+      wrapper.instance().hideHallOfFame();
+      expect(wrapper.state().showHallOfFame).toBeFalsy();
     });
   });
 });

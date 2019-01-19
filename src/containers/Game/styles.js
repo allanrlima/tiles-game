@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Title = styled.div`
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
   text-indent: 0.7rem;
   font-weight: 300;
   white-space: nowrap;
@@ -11,6 +9,9 @@ export const Title = styled.div`
 `;
 
 export const Step = styled.div`
-  display: flex;
-  justify-content: center;
+  font-weight: 600;
+`;
+
+export const HallOfFameButton = styled.div`
+  width: 160px;
 `;

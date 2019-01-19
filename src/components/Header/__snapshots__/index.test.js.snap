@@ -29,10 +29,27 @@ ShallowWrapper {
         "isStatic": true,
         "rules": Array [
           "
-  display: flex;
-  align-items: center;
   min-height: 64px;
+  display: grid;
   justify-content: space-between;
+  grid-template-columns: 100px auto 100px;
+  ",
+          "
+    @media (max-width: ",
+          "48",
+          "em) {
+      ",
+          "
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    justify-content: center;
+    grid-row-gap: 16px;
+  ",
+          ";
+    }
+  ",
+          "
 ",
         ],
       },
@@ -64,10 +81,27 @@ ShallowWrapper {
           "isStatic": true,
           "rules": Array [
             "
-  display: flex;
-  align-items: center;
   min-height: 64px;
+  display: grid;
   justify-content: space-between;
+  grid-template-columns: 100px auto 100px;
+  ",
+            "
+    @media (max-width: ",
+            "48",
+            "em) {
+      ",
+            "
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    justify-content: center;
+    grid-row-gap: 16px;
+  ",
+            ";
+    }
+  ",
+            "
 ",
           ],
         },

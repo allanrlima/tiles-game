@@ -5,14 +5,18 @@ import { lighten } from "polished";
 import { Container } from "../../components/Container";
 import { TilesWrapper } from "../../components/TilesWrapper";
 import { shuffleArray } from "../../services/helper";
-import { Title, Step } from "./styles";
+import { Title, Step, HallOfFameButton } from "./styles";
 import { Header } from "../../components/Header";
 import { GameOver } from "../../components/GameOver";
+import { HallOfFame } from "../../components/HallOfFame";
+import { Button } from "../../components/Button";
+import { setRecord } from "../../services/records";
 
 class Game extends React.Component {
   state = {
     step: 1,
     isGameOver: false,
+    showHallOfFame: false,
     name: ""
   };
 
@@ -51,8 +55,7 @@ class Game extends React.Component {
       this.setState({ step: step + 1 });
     } else {
       this.setState({
-        isGameOver: true,
-        step: 1
+        isGameOver: true
       });
     }
   };
@@ -64,17 +67,27 @@ class Game extends React.Component {
 
   onSubmitName = event => {
     event.preventDefault();
+    const { name, step } = this.state;
+    setRecord({ name, step });
     this.setState({
-      isGameOver: false
+      isGameOver: false,
+      step: 1
     });
   };
 
+  showHallOfFame = () => this.setState({ showHallOfFame: true });
+
+  hideHallOfFame = () => this.setState({ showHallOfFame: false });
+
   render() {
-    const { step, isGameOver } = this.state;
+    const { step, isGameOver, showHallOfFame } = this.state;
     return (
       <Container>
         <Header>
           <Title>Tiles Game</Title>
+          <HallOfFameButton>
+            <Button title={"See Hall Of Fame"} onClick={this.showHallOfFame} />
+          </HallOfFameButton>
           <Step>Step: {step}</Step>
         </Header>
         <TilesWrapper
@@ -87,6 +100,7 @@ class Game extends React.Component {
             onChangeName={this.onChangeName}
           />
         )}
+        {showHallOfFame && <HallOfFame hideHallOfFame={this.hideHallOfFame} />}
       </Container>
     );
   }

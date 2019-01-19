@@ -30,6 +30,7 @@ export const Input = ({ label, onChange }) => (
     <InputComponent
       type="text"
       onChange={onChange}
+      maxLength={20}
       ref={input => input && input.focus()}
     />
   </Wrapper>
