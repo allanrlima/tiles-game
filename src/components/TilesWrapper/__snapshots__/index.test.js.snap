@@ -60,6 +60,7 @@ ShallowWrapper {
         "auto ",
         "auto ",
       ],
+      "id": "tiles-wrapper",
     },
     "ref": null,
     "rendered": Array [
@@ -167,6 +168,7 @@ ShallowWrapper {
           "auto ",
           "auto ",
         ],
+        "id": "tiles-wrapper",
       },
       "ref": null,
       "rendered": Array [
