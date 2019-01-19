@@ -65,7 +65,7 @@ class Game extends React.Component {
     this.setState({ name });
   };
 
-  onSubmitName = event => {
+  onSubmitRecord = event => {
     event.preventDefault();
     const { name, step } = this.state;
     setRecord({ name, step });
@@ -96,7 +96,7 @@ class Game extends React.Component {
         />
         {isGameOver && (
           <GameOver
-            onSubmit={this.onSubmitName}
+            onSubmit={this.onSubmitRecord}
             onChangeName={this.onChangeName}
           />
         )}

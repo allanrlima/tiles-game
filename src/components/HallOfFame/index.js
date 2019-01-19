@@ -49,7 +49,6 @@ const PositionsWrapper = styled.div`
 
 export const HallOfFame = ({ hideHallOfFame }) => {
   const records = getTopTenRecords();
-  console.log(records.length);
   return (
     <Wrapper>
       <Title>

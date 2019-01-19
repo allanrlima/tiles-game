@@ -71,12 +71,17 @@ describe("Game", () => {
       expect(wrapper.state().name).toBe(name);
     });
   });
-  describe("showHallOfFame", () => {
-    it("should show hall of fame screen", () => {
+  describe("onSubmitRecord(event)", () => {
+    it("shold change name in the input", () => {
       const wrapper = shallow(<Game />);
-      wrapper.setState({ showHallOfFame: false });
-      wrapper.instance().showHallOfFame();
-      expect(wrapper.state().showHallOfFame).toBeTruthy();
+      const name = "test test";
+      const event = {
+        target: {
+          value: name
+        }
+      };
+      wrapper.instance().onChangeName(event);
+      expect(wrapper.state().name).toBe(name);
     });
   });
   describe("showHallOfFame", () => {

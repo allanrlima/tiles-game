@@ -40,3 +40,8 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired
 };
+
+Input.defaultProps = {
+  label: "Test",
+  onChange: () => {}
+};

@@ -1,0 +1,332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameOver renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GameOver
+    onChangeName={[Function]}
+    onSubmit={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef>
+          Game over ):
+        </ForwardRef>,
+        <form
+          onSubmit={[Function]}
+        >
+          <Input
+            autoFocus={true}
+            label="Insert your name to register your record"
+            onChange={[Function]}
+          />
+          <Button
+            onClick={[Function]}
+            title="Submit"
+          />
+        </form>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Game over ):",
+        },
+        "ref": null,
+        "rendered": "Game over ):",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-EHOje",
+            "isStatic": true,
+            "rules": Array [
+              "
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  text-indent: 0.7rem;
+  font-weight: 300;
+  white-space: nowrap;
+  letter-spacing: 0.7rem;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-EHOje",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Input
+              autoFocus={true}
+              label="Insert your name to register your record"
+              onChange={[Function]}
+            />,
+            <Button
+              onClick={[Function]}
+              title="Submit"
+            />,
+          ],
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "autoFocus": true,
+              "label": "Insert your name to register your record",
+              "onChange": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "onClick": [Function],
+              "title": "Submit",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-ifAKCX",
+        "isStatic": true,
+        "rules": Array [
+          "
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  color: #fff;
+  padding: 16px;
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-ifAKCX",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef>
+            Game over ):
+          </ForwardRef>,
+          <form
+            onSubmit={[Function]}
+          >
+            <Input
+              autoFocus={true}
+              label="Insert your name to register your record"
+              onChange={[Function]}
+            />
+            <Button
+              onClick={[Function]}
+              title="Submit"
+            />
+          </form>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Game over ):",
+          },
+          "ref": null,
+          "rendered": "Game over ):",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-EHOje",
+              "isStatic": true,
+              "rules": Array [
+                "
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  text-indent: 0.7rem;
+  font-weight: 300;
+  white-space: nowrap;
+  letter-spacing: 0.7rem;
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-EHOje",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Input
+                autoFocus={true}
+                label="Insert your name to register your record"
+                onChange={[Function]}
+              />,
+              <Button
+                onClick={[Function]}
+                title="Submit"
+              />,
+            ],
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "autoFocus": true,
+                "label": "Insert your name to register your record",
+                "onChange": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "onClick": [Function],
+                "title": "Submit",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": true,
+          "rules": Array [
+            "
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  color: #fff;
+  padding: 16px;
+",
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
