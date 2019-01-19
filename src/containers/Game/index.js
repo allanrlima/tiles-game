@@ -4,7 +4,7 @@ import { lighten } from "polished";
 
 import { Container } from "../../components/Container";
 import { TilesWrapper } from "../../components/TilesWrapper";
-import { shuffleArray } from "../../services/helper";
+import { shuffleArray } from "../../services/helper/index";
 import { Title, Step, HallOfFameButton } from "./styles";
 import { Header } from "../../components/Header";
 import { GameOver } from "../../components/GameOver";

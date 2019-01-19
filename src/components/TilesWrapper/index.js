@@ -19,6 +19,7 @@ export const TilesWrapper = ({ tiles, handleTileClick }) => {
   return (
     <Wrapper
       gridTemplateColumns={getTilesGridTemplateColumnsStyle(tiles) || "auto"}
+      id="tiles-wrapper"
     >
       {tiles.map((tile, index) => (
         <Tile

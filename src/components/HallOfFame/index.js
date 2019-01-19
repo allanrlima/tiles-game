@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "../../components/Button";
-import { getTopTenRecords } from "../../services/records/index";
+import { getTopTenRecords } from "../../services/records";
 
 import { media } from "../../services/styles";
 
