@@ -15,13 +15,17 @@ const getTilesGridTemplateColumnsStyle = (tiles = []) => {
   return gridTemplateColumns;
 };
 
-export const TilesWrapper = ({ tiles, setNextStep }) => {
+export const TilesWrapper = ({ tiles, handleTileClick }) => {
   return (
     <Wrapper
       gridTemplateColumns={getTilesGridTemplateColumnsStyle(tiles) || "auto"}
     >
-      {tiles.map(tile => (
-        <Tile onClick={() => setNextStep(tile.unique)} color={tile.color} />
+      {tiles.map((tile, index) => (
+        <Tile
+          key={index}
+          onClick={() => handleTileClick(tile.unique)}
+          color={tile.color}
+        />
       ))}
     </Wrapper>
   );

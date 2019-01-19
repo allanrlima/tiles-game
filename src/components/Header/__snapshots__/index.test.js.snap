@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tile renders correctly 1`] = `
+exports[`Header renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Tile />,
+  Symbol(enzyme.__unrendered__): <Header />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,8 +17,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "color": undefined,
-      "onClick": undefined,
+      "children": undefined,
     },
     "ref": null,
     "rendered": null,
@@ -27,16 +26,13 @@ ShallowWrapper {
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
-        "isStatic": false,
+        "isStatic": true,
         "rules": Array [
           "
-  background-color: ",
-          [Function],
-          ";
-  color: #fff;
-  width: 100%;
-  padding-top: 100%;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  justify-content: space-between;
 ",
         ],
       },
@@ -56,8 +52,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "color": undefined,
-        "onClick": undefined,
+        "children": undefined,
       },
       "ref": null,
       "rendered": null,
@@ -66,16 +61,13 @@ ShallowWrapper {
         "attrs": Array [],
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
-          "isStatic": false,
+          "isStatic": true,
           "rules": Array [
             "
-  background-color: ",
-            [Function],
-            ";
-  color: #fff;
-  width: 100%;
-  padding-top: 100%;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  justify-content: space-between;
 ",
           ],
         },

@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   color: #fff;
   width: 100%;
   padding-top: 100%;
+  cursor: pointer;
 `;
 
 export const Tile = ({ color, onClick }) => {

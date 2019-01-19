@@ -23,22 +23,23 @@ describe("Game", () => {
     });
   });
   describe("changeColorAndUniqueOfFirstElementInTheArray(tiles)", () => {
-    const wrapper = shallow(<Game />);
-    const tiles = wrapper
-      .instance()
-      .changeColorAndUniqueOfFirstElementInTheArray(tilesArray);
-    expect(tiles[0].color).toBe(lighten(0.2, "#bc21ef"));
-    expect(tiles[0].unique).toBeTruthy();
+    it("should change color and unique params of first element in the arrray", () => {
+      const wrapper = shallow(<Game />);
+      const tiles = wrapper
+        .instance()
+        .changeColorAndUniqueOfFirstElementInTheArray(tilesArray);
+      expect(tiles[0].color).toBe(lighten(0.2, "#bc21ef"));
+      expect(tiles[0].unique).toBeTruthy();
+    });
   });
   describe("getTiles()", () => {
+    const wrapper = shallow(<Game />);
     it("Should return an array of tiles using the current step", () => {
-      const wrapper = shallow(<Game />);
       const tiles = wrapper.instance().getTiles();
       expect(tiles).toBeInstanceOf(Array);
       expect(tiles.length).toBe(4);
     });
     it("Should generate a random color in the tiles array", () => {
-      const wrapper = shallow(<Game />);
       let tiles = wrapper.instance().getTiles();
       const firstColor = tiles[0].color;
       tiles = wrapper.instance().getTiles();
@@ -46,11 +47,29 @@ describe("Game", () => {
       expect(firstColor).not.toBe(secondColor);
     });
   });
-  describe("setNextStep(isUnique)", () => {
+  describe("handleTileClick(isUnique)", () => {
     const wrapper = shallow(<Game />);
     it("Should increase step if isUnique is true", () => {
-      wrapper.instance().setNextStep(true);
-      wrapper.state().step = 2;
+      wrapper.instance().handleTileClick(true);
+      expect(wrapper.state().step).toBe(2);
+    });
+    it("Should not increase step and show game over screen if isUnique is true", () => {
+      wrapper.instance().handleTileClick(false);
+      expect(wrapper.state().step).toBe(1);
+      expect(wrapper.state().isGameOver).toBe(true);
+    });
+  });
+  describe("onChangeName(event)", () => {
+    it("shold change name in the input", () => {
+      const wrapper = shallow(<Game />);
+      const name = "test test";
+      const event = {
+        target: {
+          value: name
+        }
+      };
+      wrapper.instance().onChangeName(event);
+      expect(wrapper.state().name).toBe(name);
     });
   });
 });

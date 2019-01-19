@@ -1,0 +1,13 @@
+import React from "react";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  justify-content: space-between;
+`;
+
+export const Header = ({ children }) => {
+  return <Wrapper>{children}</Wrapper>;
+};

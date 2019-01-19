@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import randomColor from "randomcolor";
 import { lighten } from "polished";
 
@@ -6,10 +6,14 @@ import { Container } from "../../components/Container/index";
 import { TilesWrapper } from "../../components/TilesWrapper/index";
 import { shuffleArray } from "../../services/helper";
 import { Title, Step } from "./styles";
+import { Header } from "../../components/Header";
+import { GameOver } from "./GameOver";
 
-class Game extends Component {
+class Game extends React.Component {
   state = {
-    step: 1
+    step: 1,
+    isGameOver: false,
+    name: ""
   };
 
   getTilesNumberByStep = () => {
@@ -28,7 +32,6 @@ class Game extends Component {
 
   getTiles = () => {
     const tilesNumber = this.getTilesNumberByStep();
-
     const color = randomColor();
 
     const tile = {
@@ -42,20 +45,48 @@ class Game extends Component {
     return tiles;
   };
 
-  setNextStep = isUnique => {
+  handleTileClick = isUnique => {
     const { step } = this.state;
     if (isUnique) {
       this.setState({ step: step + 1 });
+    } else {
+      this.setState({
+        isGameOver: true,
+        step: 1
+      });
     }
   };
 
+  onChangeName = event => {
+    const { value: name } = event.target;
+    this.setState({ name });
+  };
+
+  onSubmitName = event => {
+    event.preventDefault();
+    this.setState({
+      isGameOver: false
+    });
+  };
+
   render() {
-    const { step } = this.state;
+    const { step, isGameOver } = this.state;
     return (
       <Container>
-        <Title>Tiles Game</Title>
-        <Step>Step: {step}</Step>
-        <TilesWrapper setNextStep={this.setNextStep} tiles={this.getTiles()} />
+        <Header>
+          <Title>Tiles Game</Title>
+          <Step>Step: {step}</Step>
+        </Header>
+        <TilesWrapper
+          handleTileClick={this.handleTileClick}
+          tiles={this.getTiles()}
+        />
+        {isGameOver && (
+          <GameOver
+            onSubmit={this.onSubmitName}
+            onChangeName={this.onChangeName}
+          />
+        )}
       </Container>
     );
   }
