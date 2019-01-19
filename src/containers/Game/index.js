@@ -2,12 +2,12 @@ import React from "react";
 import randomColor from "randomcolor";
 import { lighten } from "polished";
 
-import { Container } from "../../components/Container/index";
-import { TilesWrapper } from "../../components/TilesWrapper/index";
+import { Container } from "../../components/Container";
+import { TilesWrapper } from "../../components/TilesWrapper";
 import { shuffleArray } from "../../services/helper";
 import { Title, Step } from "./styles";
 import { Header } from "../../components/Header";
-import { GameOver } from "./GameOver";
+import { GameOver } from "../../components/GameOver";
 
 class Game extends React.Component {
   state = {

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Input } from "../../components/Input/index";
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 
 const Wrapper = styled.div`
   position: fixed;
@@ -34,9 +35,11 @@ export const GameOver = ({ onSubmit, onChangeName }) => (
     <Title>Game over ):</Title>
     <form onSubmit={onSubmit}>
       <Input
-        label="Insert your name and press enter, to register your record"
+        label="Insert your name to register your record"
+        autoFocus
         onChange={onChangeName}
       />
+      <Button title="Submit" onClick={onSubmit} />
     </form>
   </Wrapper>
 );

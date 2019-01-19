@@ -17,6 +17,7 @@ const InputComponent = styled.input`
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   width: 100%;
+  margin-bottom: 8px;
 `;
 
 const Label = styled.div`
@@ -26,11 +27,15 @@ const Label = styled.div`
 export const Input = ({ label, onChange }) => (
   <Wrapper>
     <Label>{label}</Label>
-    <InputComponent type="text" onChange={onChange} />
+    <InputComponent
+      type="text"
+      onChange={onChange}
+      ref={input => input && input.focus()}
+    />
   </Wrapper>
 );
 
 Input.propTypes = {
-  label: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired
 };
