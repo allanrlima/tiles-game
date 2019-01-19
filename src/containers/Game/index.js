@@ -1,21 +1,11 @@
 import React, { Component } from "react";
-import { Container } from "../../components/Container/index";
-import styled from "styled-components";
 import randomColor from "randomcolor";
-import { TilesWrapper } from "../../components/TilesWrapper/index";
 import { lighten } from "polished";
 
-const Title = styled.div`
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-`;
-
-const Step = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 8px;
-`;
+import { Container } from "../../components/Container/index";
+import { TilesWrapper } from "../../components/TilesWrapper/index";
+import { shuffleArray } from "../../services/helper";
+import { Title, Step } from "./styles";
 
 class Game extends Component {
   state = {
@@ -48,6 +38,7 @@ class Game extends Component {
 
     let tiles = Array(tilesNumber).fill(tile);
     tiles = this.changeColorAndUniqueOfFirstElementInTheArray(tiles);
+    tiles = shuffleArray(tiles);
     return tiles;
   };
 
