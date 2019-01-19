@@ -51,13 +51,20 @@ class Game extends Component {
     return tiles;
   };
 
+  setNextStep = isUnique => {
+    const { step } = this.state;
+    if (isUnique) {
+      this.setState({ step: step + 1 });
+    }
+  };
+
   render() {
     const { step } = this.state;
     return (
       <Container>
         <Title>Tiles Game</Title>
         <Step>Step: {step}</Step>
-        <TilesWrapper tiles={this.getTiles()} />
+        <TilesWrapper setNextStep={this.setNextStep} tiles={this.getTiles()} />
       </Container>
     );
   }

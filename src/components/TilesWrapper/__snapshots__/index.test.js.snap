@@ -41,15 +41,19 @@ ShallowWrapper {
       "children": Array [
         <Tile
           color="red"
+          onClick={[Function]}
         />,
         <Tile
           color="red"
+          onClick={[Function]}
         />,
         <Tile
           color="red"
+          onClick={[Function]}
         />,
         <Tile
           color="red"
+          onClick={[Function]}
         />,
       ],
       "gridTemplateColumns": Array [
@@ -65,6 +69,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "color": "red",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -76,6 +81,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "color": "red",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -87,6 +93,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "color": "red",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -98,6 +105,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "color": "red",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -140,15 +148,19 @@ ShallowWrapper {
         "children": Array [
           <Tile
             color="red"
+            onClick={[Function]}
           />,
           <Tile
             color="red"
+            onClick={[Function]}
           />,
           <Tile
             color="red"
+            onClick={[Function]}
           />,
           <Tile
             color="red"
+            onClick={[Function]}
           />,
         ],
         "gridTemplateColumns": Array [
@@ -164,6 +176,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "color": "red",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -175,6 +188,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "color": "red",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -186,6 +200,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "color": "red",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -197,6 +212,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "color": "red",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": null,

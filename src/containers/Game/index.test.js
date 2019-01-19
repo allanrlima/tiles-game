@@ -22,7 +22,7 @@ describe("Game", () => {
       });
     });
   });
-  describe("changeColorAndUniqueOfFirstElementInTheArray()", () => {
+  describe("changeColorAndUniqueOfFirstElementInTheArray(tiles)", () => {
     const wrapper = shallow(<Game />);
     const tiles = wrapper
       .instance()
@@ -44,6 +44,13 @@ describe("Game", () => {
       tiles = wrapper.instance().getTiles();
       const secondColor = tiles[0].color;
       expect(firstColor).not.toBe(secondColor);
+    });
+  });
+  describe("setNextStep(isUnique)", () => {
+    const wrapper = shallow(<Game />);
+    it("Should increase step if isUnique is true", () => {
+      wrapper.instance().setNextStep(true);
+      wrapper.state().step = 2;
     });
   });
 });

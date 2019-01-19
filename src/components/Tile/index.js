@@ -8,6 +8,6 @@ const Wrapper = styled.div`
   padding-top: 100%;
 `;
 
-export const Tile = ({ color }) => {
-  return <Wrapper color={color} />;
+export const Tile = ({ color, onClick }) => {
+  return <Wrapper color={color} onClick={onClick} />;
 };
