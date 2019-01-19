@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Container } from "../../components/Container/index";
 import styled from "styled-components";
+import randomColor from "randomcolor";
 import { TilesWrapper } from "../../components/TilesWrapper/index";
+import { lighten } from "polished";
 
 const Title = styled.div`
   text-transform: uppercase;
@@ -26,15 +28,26 @@ class Game extends Component {
     return tilesNumber;
   };
 
+  changeColorAndUniqueOfFirstElementInTheArray = tiles => {
+    const oldColor = tiles[0].color;
+    const color = lighten(0.2, oldColor);
+    const uniqueTile = { color, unique: true };
+    tiles = [uniqueTile, ...tiles.splice(1)];
+    return tiles;
+  };
+
   getTiles = () => {
     const tilesNumber = this.getTilesNumberByStep();
 
+    const color = randomColor();
+
     const tile = {
-      color: "red",
+      color,
       unique: false
     };
 
-    const tiles = Array(tilesNumber).fill(tile);
+    let tiles = Array(tilesNumber).fill(tile);
+    tiles = this.changeColorAndUniqueOfFirstElementInTheArray(tiles);
     return tiles;
   };
 

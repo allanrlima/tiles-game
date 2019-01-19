@@ -1,12 +1,14 @@
 import React from "react";
+import { lighten } from "polished";
 import { shallow } from "enzyme";
 
 import Game from ".";
 
+const tilesArray = Array(4).fill({ color: "#bc21ef", unique: false });
+
 describe("Game", () => {
   it("renders correctly", () => {
-    const wrapper = shallow(<Game />);
-    expect(wrapper).toMatchSnapshot();
+    shallow(<Game />);
   });
   describe("getTilesNumberByStep()", () => {
     it("should return the number of tiles using the current step", () => {
@@ -20,16 +22,28 @@ describe("Game", () => {
       });
     });
   });
+  describe("changeColorAndUniqueOfFirstElementInTheArray()", () => {
+    const wrapper = shallow(<Game />);
+    const tiles = wrapper
+      .instance()
+      .changeColorAndUniqueOfFirstElementInTheArray(tilesArray);
+    expect(tiles[0].color).toBe(lighten(0.2, "#bc21ef"));
+    expect(tiles[0].unique).toBeTruthy();
+  });
   describe("getTiles()", () => {
     it("Should return an array of tiles using the current step", () => {
       const wrapper = shallow(<Game />);
       const tiles = wrapper.instance().getTiles();
-      expect(tiles).toEqual([
-        { color: "red", unique: false },
-        { color: "red", unique: false },
-        { color: "red", unique: false },
-        { color: "red", unique: false }
-      ]);
+      expect(tiles).toBeInstanceOf(Array);
+      expect(tiles.length).toBe(4);
+    });
+    it("Should generate a random color in the tiles array", () => {
+      const wrapper = shallow(<Game />);
+      let tiles = wrapper.instance().getTiles();
+      const firstColor = tiles[0].color;
+      tiles = wrapper.instance().getTiles();
+      const secondColor = tiles[0].color;
+      expect(firstColor).not.toBe(secondColor);
     });
   });
 });
