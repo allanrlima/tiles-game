@@ -31,6 +31,7 @@ ShallowWrapper {
             autoFocus={true}
             label="Insert your name to register your record"
             onChange={[Function]}
+            value=""
           />
           <Button
             onClick={[Function]}
@@ -88,6 +89,7 @@ ShallowWrapper {
               autoFocus={true}
               label="Insert your name to register your record"
               onChange={[Function]}
+              value=""
             />,
             <Button
               onClick={[Function]}
@@ -106,6 +108,7 @@ ShallowWrapper {
               "autoFocus": true,
               "label": "Insert your name to register your record",
               "onChange": [Function],
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -179,6 +182,7 @@ ShallowWrapper {
               autoFocus={true}
               label="Insert your name to register your record"
               onChange={[Function]}
+              value=""
             />
             <Button
               onClick={[Function]}
@@ -236,6 +240,7 @@ ShallowWrapper {
                 autoFocus={true}
                 label="Insert your name to register your record"
                 onChange={[Function]}
+                value=""
               />,
               <Button
                 onClick={[Function]}
@@ -254,6 +259,7 @@ ShallowWrapper {
                 "autoFocus": true,
                 "label": "Insert your name to register your record",
                 "onChange": [Function],
+                "value": "",
               },
               "ref": null,
               "rendered": null,

@@ -24,7 +24,7 @@ const Label = styled.div`
   font-size: 18px;
 `;
 
-export const Input = ({ label, onChange }) => (
+export const Input = ({ label, onChange, value }) => (
   <Wrapper>
     <Label>{label}</Label>
     <InputComponent
@@ -32,16 +32,19 @@ export const Input = ({ label, onChange }) => (
       onChange={onChange}
       maxLength={20}
       ref={input => input && input.focus()}
+      value={value}
     />
   </Wrapper>
 );
 
 Input.propTypes = {
+  value: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired
 };
 
 Input.defaultProps = {
+  value: "",
   label: "Test",
   onChange: () => {}
 };

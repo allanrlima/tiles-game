@@ -30,7 +30,7 @@ const Title = styled.div`
   letter-spacing: 0.7rem;
 `;
 
-export const GameOver = ({ onSubmit, onChangeName }) => (
+export const GameOver = ({ name, onSubmit, onChangeName }) => (
   <Wrapper>
     <Title>Game over ):</Title>
     <form onSubmit={onSubmit}>
@@ -38,6 +38,7 @@ export const GameOver = ({ onSubmit, onChangeName }) => (
         label="Insert your name to register your record"
         autoFocus
         onChange={onChangeName}
+        value={name}
       />
       <Button title="Submit" onClick={onSubmit} />
     </form>

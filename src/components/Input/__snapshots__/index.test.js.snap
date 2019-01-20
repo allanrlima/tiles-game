@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Input
     label="Test"
     onChange={[Function]}
+    value=""
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -28,6 +29,7 @@ ShallowWrapper {
           maxLength={20}
           onChange={[Function]}
           type="text"
+          value=""
         />,
       ],
     },
@@ -72,6 +74,7 @@ ShallowWrapper {
           "maxLength": 20,
           "onChange": [Function],
           "type": "text",
+          "value": "",
         },
         "ref": [Function],
         "rendered": null,
@@ -144,6 +147,7 @@ ShallowWrapper {
             maxLength={20}
             onChange={[Function]}
             type="text"
+            value=""
           />,
         ],
       },
@@ -188,6 +192,7 @@ ShallowWrapper {
             "maxLength": 20,
             "onChange": [Function],
             "type": "text",
+            "value": "",
           },
           "ref": [Function],
           "rendered": null,

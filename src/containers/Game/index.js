@@ -81,7 +81,7 @@ class Game extends React.Component {
   hideHallOfFame = () => this.setState({ showHallOfFame: false });
 
   render() {
-    const { step, isGameOver, showHallOfFame } = this.state;
+    const { step, isGameOver, showHallOfFame, name } = this.state;
     return (
       <Container>
         <Header>
@@ -97,6 +97,7 @@ class Game extends React.Component {
         />
         {isGameOver && (
           <GameOver
+            name={name}
             onSubmit={this.onSubmitRecord}
             onChangeName={this.onChangeName}
           />
