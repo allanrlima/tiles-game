@@ -1,10 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+Single page JavaScript application that displays the user a matrix
+of colored tiles. where the user has to spot the tile which has a different color. If the user clicks the right
+tile the game continues and the user gets the next level of difficulty presented. If the click is wrong
+the game ends.
+
+## How to run the Application
+
+install yarn:
+
+`https://yarnpkg.com/lang/en/docs/install`
+
+then run, for installing all necessary packages:
+
+`yarn install`
+
+finally, to run the application in your browser:
+
+`yarn start`
+
+see more details below.
+
+## How to run tests
+
+just run:
+
+`yarn test`
+
+see more details below.
+
+## How to run a script to win the game
+
+in the root of the project has a file called:
+
+`scriptToWinTheGame.js`
+
+copy the content and paste in your browser console and press enter, to automatically spot the right tile every second.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,12 +49,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `yarn run build`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,7 +64,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `yarn run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -62,7 +99,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 ### Deployment
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

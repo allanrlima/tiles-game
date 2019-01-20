@@ -1,4 +1,4 @@
-// Copy and paste this script in the console of your browser
+// Copy and paste this script in the console of your browser and press enter
 let tiles = null;
 let color = null;
 let colorArray = [];
@@ -32,6 +32,6 @@ setInterval(() => {
   firstColor = [];
   secondColor = [];
   tiles = null;
-  color = "";
+  color = null;
   colorArray = [];
 }, 1000);
