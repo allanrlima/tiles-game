@@ -70,6 +70,7 @@ class Game extends React.Component {
     const { name, step } = this.state;
     setRecord({ name, step });
     this.setState({
+      name: "",
       isGameOver: false,
       step: 1
     });

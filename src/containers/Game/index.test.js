@@ -72,16 +72,15 @@ describe("Game", () => {
     });
   });
   describe("onSubmitRecord(event)", () => {
-    it("shold change name in the input", () => {
+    it("shold change to correct states when name is submit", () => {
       const wrapper = shallow(<Game />);
-      const name = "test test";
       const event = {
-        target: {
-          value: name
-        }
+        preventDefault: () => {}
       };
-      wrapper.instance().onChangeName(event);
-      expect(wrapper.state().name).toBe(name);
+      wrapper.instance().onSubmitRecord(event);
+      expect(wrapper.state().isGameOver).toBeFalsy();
+      expect(wrapper.state().step).toBe(1);
+      expect(wrapper.state().name).toBe("");
     });
   });
   describe("showHallOfFame", () => {
