@@ -11,7 +11,7 @@ install yarn:
 
 `https://yarnpkg.com/lang/en/docs/install`
 
-then run, for installing all necessary packages:
+clone this repository, then run for installing all necessary packages:
 
 `yarn install`
 
