@@ -1,5 +1,6 @@
-import { getAllRecords, setRecord, getTopTenRecords } from ".";
+import { getAllRecords, setRecord, getTopTenRecords } from "."
 
+import * as index from "./index"
 describe("records", () => {
   it("should get all records", () => {
     expect(getAllRecords()).toEqual([]);
@@ -46,3 +47,68 @@ describe("records", () => {
     expect(topTenRecords.slice(0, 3)).toEqual(bestRecords);
   });
 });
+
+// @ponicode
+describe("index.getAllRecords", () => {
+    test("0", () => {
+        let callFunction = () => {
+            index.getAllRecords()
+        }
+    
+        expect(callFunction).not.toThrow()
+    })
+})
+
+// @ponicode
+describe("index.setRecord", () => {
+    test("0", () => {
+        let callFunction = () => {
+            index.setRecord("01:04:03")
+        }
+    
+        expect(callFunction).not.toThrow()
+    })
+
+    test("1", () => {
+        let callFunction = () => {
+            index.setRecord("2017-09-29T23:01:00.000Z")
+        }
+    
+        expect(callFunction).not.toThrow()
+    })
+
+    test("2", () => {
+        let callFunction = () => {
+            index.setRecord("2017-09-29T19:01:00.000")
+        }
+    
+        expect(callFunction).not.toThrow()
+    })
+
+    test("3", () => {
+        let callFunction = () => {
+            index.setRecord("Mon Aug 03 12:45:00")
+        }
+    
+        expect(callFunction).not.toThrow()
+    })
+
+    test("4", () => {
+        let callFunction = () => {
+            index.setRecord(undefined)
+        }
+    
+        expect(callFunction).not.toThrow()
+    })
+})
+
+// @ponicode
+describe("index.getTopTenRecords", () => {
+    test("0", () => {
+        let callFunction = () => {
+            index.getTopTenRecords()
+        }
+    
+        expect(callFunction).not.toThrow()
+    })
+})
